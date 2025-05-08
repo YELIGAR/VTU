@@ -1,0 +1,704 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    overflow: hidden; /* Prevents scrolling */
+    height: 100%; /* Ensures the content fits within the viewport */
+}
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.1)50%,rgba(0,0,0,0.1)50%), url(images/BG1.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment:fixed;
+    
+}
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background:transparent;
+
+    z-index: 1;
+}
+.main > * {
+    position: relative;
+    z-index: 2; /* Ensure content is above the shade */
+}
+.navbar{
+    width: 1500px;
+    height: 75px;
+    padding-top: 0%;
+    padding-left: 25%;
+}
+.cn{
+    margin-top: 0%;
+}
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 3px;
+    margin-left: 0%;
+    
+}
+.logo img {
+    width: 80px;
+}
+.talking-image {
+    position: absolute;
+    top: 730%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 330px;
+    height: auto;
+    z-index: 2;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.7));
+    animation: fadeIn 1s ease-in-out;
+}
+.news-box {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    width: 350px;
+    height: 500px; /* Increased height */
+    border: 2px solid #FFA500; /* Gold border */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    overflow-y: auto; /* Adds scrolling if content exceeds height */
+}
+
+.news-box h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #FFA500;
+    text-align: center;
+}
+
+.news-box ul {
+    list-style-type: "➤ ";
+    padding-left: 20px;
+}
+
+.news-box li {
+    margin-bottom: 10px;
+    margin-bottom: 15px; /* Increased spacing between headlines */
+}
+
+.news-box a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.news-box a:hover {
+    color: #FFA500;
+    text-decoration: underline;
+}
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    margin-right: 22px;
+}
+
+.menu ul{
+    float: left;
+    display: flex;
+    padding-top:-2%;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.menu ul li{
+    
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+.menu ul li a{
+    font-size: medium;
+    width: 70px;
+    padding-top:-2%;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    padding: 10px 15px;
+}
+
+.menu ul li a:hover{
+    
+    box-shadow: 0 4px 2px -2px #FFA500; /* Add an orange shadow under the menu option */
+    transition: 0.3s ease-in-out; /* Smooth transition for the shadow effect */
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 350px;
+    margin-top: 0.5%;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #FFA500;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #FFA500;
+    border: 2px solid #FFA500;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin-left: 150px;
+    color: #fff;
+    position: relative;
+}
+
+.content .par{
+    
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    margin-bottom:-2%;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #FFA500;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+
+.cn:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: #FFA500;
+    font-size: 65px
+}
+
+.form{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -20px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #FFA500;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #FFA500;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #030303;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #FFA500;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: #FFA500;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #FFA500;
+}
+
+.navbar ul {
+    margin-top: 8%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+
+
+/* Submenu */
+.navbar ul li ul {
+    display: none;/* Hide submenu by default */
+    position: absolute;/* Align submenu with the parent menu item */
+    top: 35px;/* Position submenu below the parent menu item */
+    left: 0; /* Align submenu with the parent menu item */
+    
+    width: 120px;/* Fixed width for the submenu */
+    max-height: 90px;/* Fixed height for the submenu */
+    overflow-y: auto;/* Enable vertical scrolling */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    z-index: 1000; /* Ensure submenu appears above other elements */
+}   
+
+.navbar ul li ul li {
+    text-align: left;
+}
+
+.navbar ul li ul li a {
+    padding: 10px;
+    display: block;
+    color: white;
+}
+
+.navbar ul li ul li a:hover {
+    background: #ff9800;
+}
+.submenu {
+    display: none; /* Hide submenu by default */
+    position: absolute;
+    top: 35px; /* Position submenu below the parent menu item */
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); /* Background color for submenu */
+    width: 150px; /* Fixed width for the submenu */
+    height: 120px;
+    /*max-height: 120px;  Limit height to 3 rows */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border: 1px solid #000; /* Add a border with a specific color */
+}
+
+/* Custom scrollbar styling */
+.submenu::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+}
+
+.submenu::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background color of the scrollbar track */
+    border-radius: 5px;
+}
+
+.submenu::-webkit-scrollbar-thumb {
+    background: #ff9800; /* Color of the scrollbar thumb */
+    border-radius: 5px;
+}
+
+.submenu::-webkit-scrollbar-thumb:hover {
+    background: #FFA500; /* Color of the scrollbar thumb on hover */
+}
+
+table {
+width: 40%; /* Keep the width of the table */
+margin-top: 1%; 
+border-collapse: collapse;
+margin-left: 10%;
+
+}
+table, th, td {
+border: 1px solid white;
+color:#000;
+
+}
+th, td {
+padding: 15px; /* Increase the padding to make the cells taller */
+text-align: center;
+}
+th {
+background-color: #f2f2f2;
+}
+select {
+width: 170px; /* Keep the width of the dropdowns */
+padding: 5px; /* Adjust padding for dropdowns */
+}
+button {
+padding: 10px 20px; /* Adjust button size */
+background-color: #4CAF50;
+
+color: white;
+border: none;
+cursor: pointer;
+}
+button:hover {
+background-color: #45a049;
+}
+/* Center the submit button */
+.submit-container {
+margin-left: 21%;
+margin-top: 20px;
+
+}
+
+.dynamic-button {
+padding: 10px 20px;
+margin: 5px;
+margin-left: 3%;
+background-color: #FFA500;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.dynamic-button:hover {
+background-color: #FFA500;
+}
+#buttonContainer h3 {
+font-size: 18px;
+color: #FFA500;
+margin-bottom: 10px;
+margin-top: 20px; 
+}
+#modulesContainer {
+display: flex;
+flex-direction: column; /* Align items vertically */
+align-items: center; /* Center items horizontally */
+justify-content: center; /* Center items vertically */
+margin-top: 20px; /* Add some space above the container */
+margin-left: 12%;
+}
+
+#modulesContainer button {
+margin-left: 70px; /* Add space around the buttons */
+margin-top: 30px; /* Add space around the buttons */
+padding: 10px 20px; /* Adjust button size */
+background-color: #FFA500;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+
+#modulesContainer button:hover {
+background-color: #FFA500;
+}
+#modulesContainer h3 {
+align-items: center;
+margin-top: 40px; /* Adds some space above the heading */
+margin-bottom: 10px; /* Adds some space below the heading */
+font-size: 35px; /* Adjusts the font size */
+color: #FFA500; /* Optional: Sets the color */
+}
+
+
+
+#yearsContainer {
+display: flex;
+flex-direction: column; /* Align items vertically */
+align-items: center; /* Center items horizontally */
+justify-content: center; /* Center items vertically */
+margin-top: 20px; /* Add some space above the container */
+margin-left: 12%;
+}
+
+#yearsContainer button {
+margin-left: 70px; /* Add space around the buttons */
+margin-top: 30px; /* Add space around the buttons */
+padding: 10px 20px; /* Adjust button size */
+/* The above code is defining CSS styles for buttons within an element with the ID "yearsContainer". It
+sets the background color to #FFA500, text color to white, removes the border, changes the cursor to
+a pointer, and adds a border radius of 5px to create rounded corners. Additionally, it specifies
+that when a button is hovered over, the background color changes to #FFA500. */
+background-color: #FFA500;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+
+#yearsContainer button:hover {
+background-color: #FFA500;
+}
+#yearsContainer h3 {
+align-items: center;
+margin-top: 40px; /* Adds some space above the heading */
+margin-bottom: 10px; /* Adds some space below the heading */
+font-size: 35px; /* Adjusts the font size */
+color: #FFA500; /* Optional: Sets the color */
+}
+
+#syllabusContainer {
+display: flex;
+flex-direction: column; /* Align items vertically */
+align-items: center; /* Center items horizontally */
+justify-content: center; /* Center items vertically */
+margin-top: 20px; /* Add some space above the container */
+margin-left: 12%;
+}
+
+#syllabusContainer button {
+margin-left: 70px; /* Add space around the buttons */
+margin-top: 30px; /* Add space around the buttons */
+padding: 10px 20px; /* Adjust button size */
+/* The above code is defining CSS styles for buttons within an element with the ID "yearsContainer". It
+sets the background color to #FFA500, text color to white, removes the border, changes the cursor to
+a pointer, and adds a border radius of 5px to create rounded corners. Additionally, it specifies
+that when a button is hovered over, the background color changes to #FFA500. */
+background-color: #FFA500;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+
+#syllabusContainer button:hover {
+background-color: #FFA500;
+}
+#syllabusContainer h3 {
+align-items: center;
+margin-top: 40px; /* Adds some space above the heading */
+margin-bottom: 10px; /* Adds some space below the heading */
+font-size: 35px; /* Adjusts the font size */
+color: #FFA500; /* Optional: Sets the color */
+}
+
+
+
+
+#impContainer {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin-top: 20px; /* Add some space above the container */
+    margin-left: 12%;
+    }
+    
+    #impContainer button {
+    margin-left: 70px; /* Add space around the buttons */
+    margin-top: 30px; /* Add space around the buttons */
+    padding: 10px 20px; /* Adjust button size */
+    /* The above code is defining CSS styles for buttons within an element with the ID "yearsContainer". It
+    sets the background color to #FFA500, text color to white, removes the border, changes the cursor to
+    a pointer, and adds a border radius of 5px to create rounded corners. Additionally, it specifies
+    that when a button is hovered over, the background color changes to #FFA500. */
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+    
+    #impContainer button:hover {
+    background-color: #FFA500;
+    }
+    #impContainer h3 {
+    align-items: center;
+    margin-top: 40px; /* Adds some space above the heading */
+    margin-bottom: 10px; /* Adds some space below the heading */
+    font-size: 35px; /* Adjusts the font size */
+    color: #FFA500; /* Optional: Sets the color */
+    }
+    
+
+
+    #labContainer {
+        display: flex;
+        flex-direction: column; /* Align items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        margin-top: 20px; /* Add some space above the container */
+        margin-left: 12%;
+        }
+        
+        #labContainer button {
+        margin-left: 70px; /* Add space around the buttons */
+        margin-top: 30px; /* Add space around the buttons */
+        padding: 10px 20px; /* Adjust button size */
+        /* The above code is defining CSS styles for buttons within an element with the ID "yearsContainer". It
+        sets the background color to #FFA500, text color to white, removes the border, changes the cursor to
+        a pointer, and adds a border radius of 5px to create rounded corners. Additionally, it specifies
+        that when a button is hovered over, the background color changes to #FFA500. */
+        background-color: #FFA500;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        }
+        
+        #labContainer button:hover {
+        background-color: #FFA500;
+        }
+        #labContainer h3 {
+        align-items: center;
+        margin-top: 40px; /* Adds some space above the heading */
+        margin-bottom: 10px; /* Adds some space below the heading */
+        font-size: 35px; /* Adjusts the font size */
+        color: #FFA500; /* Optional: Sets the color */
+        }
+        
+
+
+/* Center the search button */
+#searchButtonContainer {
+margin-Left: 43%;
+margin-top: 5px; /* Add some space above the button */
+}
+
+#searchButtonContainer button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+
+#searchButtonContainer button:hover {
+background-color: #45a049;
+}
+
